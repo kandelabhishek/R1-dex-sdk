@@ -1,10 +1,10 @@
-##connect the R1 to the internet
+# connect the R1 to the internet
 
-#make sure you are connecting the r1 with ethernet. 
-#This process is temporary. After you restart the R1, it goes back to default settings.
+## make sure you are connecting the r1 with ethernet. 
+## This process is temporary. After you restart the R1, it goes back to default settings.
 
-#For ubuntu
-#Check the network interface name
+## For ubuntu
+## Check the network interface name
 ```bash
 ip -br addr
 ip rout show default
@@ -13,7 +13,7 @@ ip rout show default
 
 R1 is connected to enp1ss0. The wifi is connected to wlp2so.
 
-#set the wired LAN Ip address of your PC(Ubuntu) to the wired LAN side of your PC
+## set the wired LAN Ip address of your PC(Ubuntu) to the wired LAN side of your PC
 
 ```bash
 sudo ip addr replace 192.168.123.99/24 dev enp1s0
@@ -68,7 +68,7 @@ ip -br addr
 ```
 <img src="image/ipaddrr1.png" >
 
-##Temporarily set the value obtained from the Wifi DNS of your PC to the wired R1
+## Temporarily set the value obtained from the Wifi DNS of your PC to the wired R1
 ```bash
 sudo nmcli device modify eth0 ipv4.gateway 192.168.123.99 ipv4.dns "192.168.0.1"
 
@@ -82,7 +82,7 @@ ping -c 4 8.8.8.8
 
 ```
 <img src="image/8.8.8.8.png" >
-###For checking brainco hand
+# For checking brainco hand
 
 #Download and build the brainco hand sdk
 ```bash
