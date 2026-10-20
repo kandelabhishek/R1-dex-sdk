@@ -65,7 +65,8 @@ ssh unitree@192.168.132.164
 #check the wired LAN interface name
 ```bash
 ip -br addr
-<img src="image/ipaddrr1.png" >```
+```
+<img src="image/ipaddrr1.png" >
 
 ##Temporarily set the value obtained from the Wifi DNS of your PC to the wired R1
 ```bash
