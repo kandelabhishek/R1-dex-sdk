@@ -50,19 +50,19 @@ sudo iptables -t nat -S
 sudo iptables -S FORWARD
 
 ```
-check the DNS of your PC
+## check the DNS of your PC
 ```bash
 nmcli -f IP4.DNS device show wlp2s0
 
 ```
 <img src="image/dnsdeviceshow.png" >
 
-##SSH into the R1
+## SSH into the R1
 ```bash
 ssh unitree@192.168.132.164
 
 ```
-#check the wired LAN interface name
+# check the wired LAN interface name
 ```bash
 ip -br addr
 ```
@@ -75,7 +75,7 @@ sudo nmcli device modify eth0 ipv4.gateway 192.168.123.99 ipv4.dns "192.168.0.1"
 ```
 <img src="image/modify.png" >
 
-#check if the internet is working 
+# check if the internet is working 
 ```bash
 
 ping -c 4 8.8.8.8
@@ -83,8 +83,8 @@ ping -c 4 8.8.8.8
 ```
 <img src="image/8.8.8.8.png" >
 # For checking brainco hand
-
-#Download and build the brainco hand sdk
+ 
+# Download and build the brainco hand sdk
 ```bash
 git clone https://github.com/BrainCoTech/brainco-hand-sdk.git
 cd brainco-hand-sdk.git/
@@ -97,7 +97,7 @@ cd c/
 make
 
 ```
-#run the hand demo
+# run the hand demo
 
 ```bash
 # Left hand

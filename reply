@@ -1,0 +1,15 @@
+g1 has three calibration. IMU calibration, Full-body calibration and Limb-specific calibration. so I dont know which calibrtion the costumer is talking about. 
+- First you need to do the IMU calibration, Then Full body calibration. If there is still some problems in moving then you can try offset-configuration.
+
+As for the problem of g1 shaking. If g1 is standing for a long period of time, then it will start shaking. 
+-you can change to running mode and revert back to walking mode. Doing this can reduce the shaking but after standing for some time it will start shaking
+-you can start g1 using g1 hanger or from a chair. instead of using Locked standing mode. this will also reduce the shaking of g1.
+
+As for the dragging of the feet, we recommend you try the calibration again. As we dont know which calibration you did.
+The propuse of calibrtion is to make sure that the robot function properly and move properly. 
+IMU calibration:This establishes the robot's fundamental orientation relative to gravity by zeroing the internal accelerometers and gyroscopes. It ensures the system correctly identifies a perfectly level plane. If the IMU is miscalibrated, the G1 will attempt to compensate for a non-existent slope, resulting in constant drifting, leaning, or an inability to stand still on flat ground.
+
+Full-Body Calibration (Joint Zero-Point Calibration): This registers the absolute mechanical "zero" position for every joint encoder across the entire robot simultaneously. During this process, motor torque is cut, and the operator manually rotates the waist, legs, and arms counterclockwise until they hit their physical hard stops. Saving this state tells the kinematic solver the exact mechanical boundaries. If this is off, the robot's calculated posture will desync from its physical posture, causing swaying, foot-dragging, or irregular walking rhythms.
+
+
+
