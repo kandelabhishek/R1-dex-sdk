@@ -82,9 +82,10 @@ ping -c 4 8.8.8.8
 
 ```
 <img src="image/8.8.8.8.png" >
+```
 # For checking brainco hand
  
-# Download and build the brainco hand sdk
+## Download and build the brainco hand sdk
 ```bash
 git clone https://github.com/BrainCoTech/brainco-hand-sdk.git
 cd brainco-hand-sdk.git/
