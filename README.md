@@ -1,7 +1,7 @@
 # connect the R1 to the internet
 
-## make sure you are connecting the r1 with ethernet. 
-## This process is temporary. After you restart the R1, it goes back to default settings.
+> make sure you are connecting the r1 with ethernet. 
+> This process is temporary. After you restart the R1, it goes back to default settings.
 
 ## For ubuntu
 ## Check the network interface name
