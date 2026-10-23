@@ -11,7 +11,7 @@ ip rout show default
 ```
 <img src="image/ipaddrpc.png" >
 
-R1 is connected to enp1ss0. The wifi is connected to wlp2so.
+>R1 is connected to enp1ss0. The wifi is connected to wlp2so.
 
 ## set the wired LAN Ip address of your PC(Ubuntu) to the wired LAN side of your PC
 
@@ -20,28 +20,28 @@ sudo ip addr replace 192.168.123.99/24 dev enp1s0
 sudo ip link set enp1s0 up
 
 ```
-This will allow PC to forward communications received from R1 wired LAN to the Wifi network.
+>This will allow PC to forward communications received from R1 wired LAN to the Wifi network.
 ```bash
 sudo sysctl -w net.ipv4.ip_forward=1
 
 ```
-We will add NAT settings that routes traffic leaving the R1 network to the outside as traffic on the Wifi side of the PC
+>We will add NAT settings that routes traffic leaving the R1 network to the outside as traffic on >the Wifi side of the PC
 
 ```bash
 sudo iptables -t nat -C POSTROUTING -s 192.168.123.0/24 -o wlp2s0 -j MASQUERADE 2>/dev/null || sudo iptables -t nat -A POSTROUTING -s 192.168.123.0/24 -o wlp2s0 -j MASQUERADE
 
 ```
-This allows communication from the R1 to the wifi network.
+>This allows communication from the R1 to the wifi network.
 ```bash
 sudo iptables -C FORWARD -i enp1s0 -o wlp2s0 -s 192.168.123.0/24 -j ACCEPT 2>/dev/null || sudo iptables -A FORWARD -i enp1s0 -o wlp2s0 -s 192.168.123.0/24 -j ACCEPT
 
 ```
-This allows the return of communication that has left R1 to an external source
+>This allows the return of communication that has left R1 to an external source
 ```bash
 sudo iptables -C FORWARD -i wlp2s0 -o enp1s0 -d 192.168.123.0/24 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT 2>/dev/null || sudo iptables -A FORWARD -i wlp2s0 -o enp1s0 -d 192.168.123.0/24 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
 ```
-This displays the configuration status on you PC
+>This displays the configuration status on you PC
 
 ```bash
 ip -4 addr show enp1s0
@@ -92,7 +92,7 @@ cd brainco-hand-sdk.git/
 ./download-lib.sh
 
 ```
-build it
+.build it
 ```bash
 cd c/
 make
