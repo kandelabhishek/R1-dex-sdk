@@ -82,7 +82,7 @@ ping -c 4 8.8.8.8
 
 ```
 <img src="image/8.8.8.8.png" >
-```
+
 # For checking brainco hand
  
 ## Download and build the brainco hand sdk
